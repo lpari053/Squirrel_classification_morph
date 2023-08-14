@@ -1,3 +1,5 @@
+#Thi code perit to train a model using the pre-trained model MobileNetV2
+
 import os
 import numpy as np
 import tensorflow as tf
