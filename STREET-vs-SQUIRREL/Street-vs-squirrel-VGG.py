@@ -1,8 +1,16 @@
+#This code permit to train a model using the pre-trained model VGG. 
+#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
+#6000 images for the train dataset work well 
+#In the database the squirrel folder contains north-east american squirrel gray-black-other
+#In the other folder , you ca  put images from Google Street View 
+
+
+
 # Path to the dataset directory
 image_path = 'database/squirell_vs_street'
 
 #Path where thhe best model will be save
-nom_MODEL='model/street_vs_squirell/street_vs_squirell.keras'
+nom_MODEL='STREET-VS-SQUIRREL/street_vs_squirell.keras'
 
 import os
 import numpy as np

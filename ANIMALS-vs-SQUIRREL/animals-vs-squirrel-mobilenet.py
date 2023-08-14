@@ -1,3 +1,12 @@
+
+#This code permit to train a model using the pre-trained model MobileNetV2. 
+#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
+#5000 images from the train dataset work well 
+#In the database the squirrel folder contains north-east american squirrel gray-black-other
+#In the other folder , put images of various animals coming from https://www.kaggle.com/datasets/alessiocorrado99/animals10
+
+
+
 import os
 import numpy as np
 import tensorflow as tf

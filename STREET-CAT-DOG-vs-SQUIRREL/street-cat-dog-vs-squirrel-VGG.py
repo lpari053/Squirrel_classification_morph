@@ -1,3 +1,13 @@
+
+#This code permit to train a model using the pre-trained model VGG. 
+#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
+#5000 images from the train dataset work well 
+#In the database the squirrel folder contains north-east american squirrel gray-black-other
+#In the other folder , you can  put images from Google Street View and images of Cat and Dog
+
+
+
+
 import tensorflow as tf
 import os
 import pathlib

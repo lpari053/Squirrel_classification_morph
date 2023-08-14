@@ -1,6 +1,15 @@
+#This code permit to train a model using the pre-trained model MobileNetV2. 
+#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
+#6000 images for the train dataset work well 
+#In the database the squirrel folder contains north-east american squirrel gray-black-other
+#In the other folder , you ca  put images from Google Street View 
+
+
+
+
 # Set paths and model name
 chemin_image = r'database/squirell_vs_street'
-nom_MODEL = 'model/street_squirell_mobilenet/street_squirell_mobilenet.keras'
+nom_MODEL = 'STREET-VS-SQUIRREL/street_squirell_mobilenet.keras'
 
 
 # Import necessary libraries

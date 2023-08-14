@@ -1,8 +1,8 @@
-#This code permit to train a model using the pre-trained model MobileNetV2. 
-#This is a binar classification OTHER vs SQUIRREL with 3 dataset train validation test. 
+#This code permit to train a model without using a pre-trained model. 
+#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test. 
 #This code work well with the repartition 25000 pictures to train an 10000 pictures for the validation and test dataset
 #In the database the other folder contains images comming from https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset
-#In the database the squirrel folder contains north-east american squirrel gray-black-other###
+#In the database the squirrel folder contains north-east american squirrel gray-black-other
 
 
 
