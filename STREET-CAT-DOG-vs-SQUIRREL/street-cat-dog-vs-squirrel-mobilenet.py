@@ -1,8 +1,26 @@
-#This code permit to train a model using the pre-trained model MobileNetV2. 
-#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
-#5000 images from the train dataset work well 
-#In the database the squirrel folder contains north-east american squirrel gray-black-other
-#In the other folder , you can  put images from Google Street View and images of Cat and Dog
+
+
+"""
+Training a Binary Classification Model using MobileNetV2
+
+This script demonstrates how to train a binary classification model using the MobileNetV2 architecture.
+The model is designed to classify images as either 'OTHER' or 'SQUIRREL' using a dataset that encompasses
+images from various sources, including north-east American squirrels, Google Street View, and images of cats and dogs.
+
+The dataset is divided into three subsets: train, validation, and test, and consists of a total of 5000 images in the training set.
+
+The 'SQUIRREL' class comprises images of north-east American squirrels in different color variations, such as gray, black, and others.
+The 'OTHER' class includes images from diverse sources, including Google Street View, as well as images of cats and dogs.
+
+The MobileNetV2 architecture is employed as a feature extractor, and a custom dense layer is added for binary classification.
+The script compiles the model using the Adam optimizer and categorical cross-entropy loss.
+
+Data preprocessing involves image resizing and normalization. Early stopping is employed during training to prevent overfitting
+and ensure the model's generalization capability.
+
+Author: Laura PARISOT
+Date: August 2023
+"""
 
 
 

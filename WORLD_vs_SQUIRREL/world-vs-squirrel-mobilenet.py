@@ -1,3 +1,21 @@
+"""
+Transfer Learning with MobileNetV2 for Binary Image Classification
+
+This script demonstrates transfer learning using the MobileNetV2 pre-trained model for binary image classification.
+The objective is to classify images as either 'OTHER' or 'SQUIRREL' using a dataset containing images of squirrels and other classes.
+
+The dataset is divided into three subsets: train, validation, and test, with each image resized to 224x224 pixels.
+
+The MobileNetV2 model, pre-trained on the ImageNet dataset, is used as the base model. Custom layers are added on top of the base model to perform binary classification.
+
+The model is compiled using the SGD optimizer with a learning rate of 0.001 and categorical cross-entropy loss. Early stopping is employed to prevent overfitting.
+
+Author: Laura PARISOT
+Date: August 2023
+"""
+
+
+
 import os
 import numpy as np
 import tensorflow as tf

@@ -1,10 +1,24 @@
+"""
+Training a Binary Classification Model using VGG
 
-#This code permit to train a model using the pre-trained model VGG. 
-#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
-#5000 images from the train dataset work well 
-#In the database the squirrel folder contains north-east american squirrel gray-black-other
-#In the other folder , put images of various animals coming from https://www.kaggle.com/datasets/alessiocorrado99/animals10
+This script demonstrates how to train a binary classification model using the VGG architecture,
+aiming to classify images as either 'OTHER' or 'SQUIRREL' from a diverse dataset. The dataset includes
+three subsets for training, validation, and testing, with a total of 5000 images in the training set.
 
+The 'SQUIRREL' class encompasses images of north-east American squirrels with variations in color and appearance,
+including gray, black, and other types. On the other hand, the 'OTHER' class includes images of various animals
+from the comprehensive 'animals10' dataset available at https://www.kaggle.com/datasets/alessiocorrado99/animals10.
+
+The VGG architecture is employed as a pre-trained feature extractor. The script fine-tunes the model on
+the custom binary classification task by freezing certain layers and allowing fine-tuning of later blocks. The
+model is compiled with the Adam optimizer and categorical cross-entropy loss.
+
+The training process involves data preprocessing, augmentation, and early stopping to ensure optimal model performance.
+
+
+Author: Laura PARISOT
+Date: August 2023
+"""
 
 
 import tensorflow as tf

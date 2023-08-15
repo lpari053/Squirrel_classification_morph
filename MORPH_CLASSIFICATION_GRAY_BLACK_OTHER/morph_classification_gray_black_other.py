@@ -1,6 +1,37 @@
+
+"""
+Cross-Validated Classification using DenseNet201
+
+This script demonstrates how to perform cross-validated classification using the DenseNet201 architecture,
+with a focus on training, validation, and evaluation of a model on a morphological classification dataset.
+
+The dataset consists of images categorized into three classes. The script employs k-fold cross-validation
+to robustly train and validate the model. Each fold is trained on a subset of data and evaluated on separate
+test data.
+
+The pre-trained DenseNet201 model, pretrained on ImageNet, is loaded and adapted to the morphological classification
+task. Specifically, certain layers are fine-tuned to the dataset's features while maintaining the transfer of
+pre-learned knowledge.
+
+Data augmentation is utilized to enhance the model's ability to generalize, and validation and test data are preprocessed
+accordingly. A separate model checkpoint is saved for each fold, enabling the selection of the best-performing model based
+on validation accuracy.
+
+The script highlights how to iterate through the folds, train, validate, and evaluate models while using the DenseNet201
+architecture for morphological classification.
+
+
+Author: Laura PARISOT
+Date: August 2023
+"""
+
+
+
+
+
 import tensorflow as tf
 from tensorflow.keras.applications import DenseNet201
-from tensorflow.keras.layers import Dense, GlobalAveragePooling2D,Dropout
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import SGD
 from sklearn.model_selection import KFold

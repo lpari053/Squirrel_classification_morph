@@ -1,18 +1,24 @@
-#This code permit to train a model without using a pre-trained model. 
-#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test. 
-#This code work well with the repartition 25000 pictures to train an 10000 pictures for the validation and test dataset
-#In the database the other folder contains images comming from https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset
-#In the database the squirrel folder contains north-east american squirrel gray-black-other
+"""
+Binary Classification without Pre-trained Model
 
+This script demonstrates the process of training a binary classification model without using a pre-trained model.
+The objective is to classify images as either 'OTHER' or 'SQUIRREL' using a dataset consisting of images of north-east American squirrels and images from the Flickr image dataset.
+
+The dataset is divided into three subsets: train, validation, and test, comprising a total of 25000 images for training and 10000 images each for validation and testing.
+
+A custom convolutional neural network (CNN) architecture is defined for feature extraction and classification. Data augmentation techniques, such as random flips, rotations, and zooming, are applied to enhance the model's ability to generalize.
+
+The model is compiled using the Adam optimizer and binary cross-entropy loss. Early stopping is used to prevent overfitting during training.
+
+Author: Laura PARISOT
+Date: August 2023
+"""
 
 
 import os
-import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.applications import VGG16,VGG19
-from tensorflow.keras.optimizers import Adam,SGD
 from tensorflow.keras.callbacks import EarlyStopping
 image_width, image_height = 224, 224
 

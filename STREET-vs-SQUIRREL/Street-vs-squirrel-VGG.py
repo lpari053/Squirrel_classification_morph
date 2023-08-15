@@ -1,10 +1,24 @@
-#This code permit to train a model using the pre-trained model VGG. 
-#This is a binary classification OTHER vs SQUIRREL with 3 dataset train validation test.
-#6000 images for the train dataset work well 
-#In the database the squirrel folder contains north-east american squirrel gray-black-other
-#In the other folder , you ca  put images from Google Street View 
+"""
+Binary Classification using VGG
 
+This script illustrates the process of training a binary classification model using the VGG architecture.
+The objective is to classify images as either 'SQUIRREL' or 'STREET' using a dataset containing images of north-east
+American squirrels and images from Google Street View.
 
+The dataset is divided into three subsets: train, validation, and test, and consists of 6000 images in the training set.
+
+The 'SQUIRREL' class comprises images of north-east American squirrels in various colors and appearances, while the 'STREET'
+class contains images sourced from Google Street View.
+
+VGG is utilized as a feature extractor, and a custom dense layer is added for binary classification.
+The model is compiled using the Adam optimizer and categorical cross-entropy loss.
+
+Data preprocessing includes image normalization and resizing. Early stopping is employed during training to prevent overfitting
+and to achieve optimal generalization.
+
+Author: Laura PARISOT
+Date: August 2023
+"""
 
 # Path to the dataset directory
 image_path = 'database/squirell_vs_street'
